@@ -1,0 +1,40 @@
+﻿using System.Collections.ObjectModel;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using VinhKhanhApp.Models;
+using Microsoft.Maui.Controls;
+using Newtonsoft.Json;
+
+namespace VinhKhanhApp.ViewModels
+{
+    public class MapViewModel : BindableObject
+    {
+        public ObservableCollection<POI> Pois { get; } = new ObservableCollection<POI>();
+
+        private bool _isBusy;
+        public bool IsBusy { get => _isBusy; set { _isBusy = value; OnPropertyChanged(); } }
+
+        public ICommand LoadCommand { get; }
+        public ICommand SaveCommand { get; } public ICommand DeleteCommand { get; }
+        public MapViewModel()
+        {
+            LoadCommand = new Command(async () => await LoadAsync());
+        }
+
+        public async Task LoadAsync()
+        {
+            if (IsBusy) return;
+            IsBusy = true;
+            try
+            {
+                using var http = new HttpClient(new HttpClientHandler { ServerCertificateCustomValidationCallback = (m, c, ch, er) => true });
+                var json = await http.GetStringAsync("https://localhost:7139/api/POIs");
+                var list = JsonConvert.DeserializeObject<List<POI>>(json);
+                Pois.Clear();
+                foreach (var p in list) Pois.Add(p);
+            }
+            catch { }
+            finally { IsBusy = false; }
+        }   
+    }
+}

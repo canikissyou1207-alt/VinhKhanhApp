@@ -1,0 +1,66 @@
+﻿using Microsoft.Maui.Controls.Maps;
+using VinhKhanhApp.ViewModels;
+using VinhKhanhApp.Models;
+
+namespace VinhKhanhApp.Views;
+
+public partial class MapView : ContentPage
+{
+    private MapViewModel vm => BindingContext as MapViewModel;
+
+    public MapView()
+    {
+        InitializeComponent();
+        vm.LoadCommand.Execute(null);
+        vm.PropertyChanged += Vm_PropertyChanged;
+
+        // Thêm đoạn này vào nơi bạn khởi tạo hoặc nạp dữ liệu cho danh sách POI, ví dụ trong MapViewModel hoặc nơi bạn quản lý vm.Pois
+        vm.Pois.Add(new POI
+        {
+            Name = "đại học sài gòn",
+            Latitude = 10.759494174781711,
+            Longitude = 106.68201041037294,
+            Description_VN = "Đại học Sài Gòn"
+            // Thêm các thuộc tính khác nếu cần
+        });
+
+        vm.Pois.Add(new POI
+        {
+            Name = "Lẩu Nướng Thuận Việt",
+            Latitude = 10.761059147965453,
+            Longitude = 106.70307371240285,
+            Description_VN = "Lẩu Nướng Thuận Việt"
+        });
+    }
+
+    private void Vm_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+    {
+        if (e.PropertyName == nameof(vm.IsBusy)) return;
+        // Add pins when Pois collection changes: simple approach - clear and re-add
+        MapControl.Pins.Clear();
+        foreach (var p in vm.Pois)
+        {
+            var pin = new Pin
+            {
+                Label = p.Name,
+                Location = new Location(p.Latitude, p.Longitude),
+                Address = p.Description_VN
+            };
+            pin.MarkerClicked += Pin_MarkerClicked;
+            MapControl.Pins.Add(pin);
+        }
+    }
+
+    private async void Pin_MarkerClicked(object sender, PinClickedEventArgs e)
+    {
+        if (sender is Pin pin)
+        {
+            // show a simple dialog with details and option to open detail page
+            var res = await DisplayActionSheet(pin.Label, "Hủy", null, "Xem chi tiết", "Nghe ngắn");
+            var poi = vm.Pois.FirstOrDefault(x => x.Name == pin.Label);
+            if (res == "Xem chi tiết" && poi != null) await Navigation.PushAsync(new DetailPage(poi, true));
+            if (res == "Nghe ngắn" && poi != null) 
+                await TextToSpeech.Default.SpeakAsync(poi.Description_VN ?? poi.Description_EN ?? "");
+        }
+    }
+}

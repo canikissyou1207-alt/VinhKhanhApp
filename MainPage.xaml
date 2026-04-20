@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VinhKhanhApp.MainPage">
+    <Grid>
+        <Grid x:Name="LanguageOverlay" BackgroundColor="#FDFDFD" ZIndex="10">
+            <VerticalStackLayout VerticalOptions="Center" Spacing="25" Padding="30">
+                <Label Text="VINH KHANH STREET GUIDE" HorizontalOptions="Center" 
+                       FontSize="24" FontAttributes="Bold" TextColor="#FF5722"/>
+                <Button Text="Tiếng Việt 🇻🇳" Clicked="OnSelectVN" HeightRequest="60" CornerRadius="30" BackgroundColor="#FF5722"/>
+                <Button Text="English 🇺🇸" Clicked="OnSelectEN" HeightRequest="60" CornerRadius="30" BackgroundColor="#2196F3"/>
+            </VerticalStackLayout>
+        </Grid>
+
+        <Grid x:Name="MainAppContent" IsVisible="False" RowDefinitions="Auto, *">
+            <Grid Grid.Row="0" ColumnDefinitions="Auto, *, Auto" Padding="10" BackgroundColor="#F5F5F5">
+                <HorizontalStackLayout Grid.Column="0" Spacing="5">
+                    <Picker x:Name="LanguagePicker" SelectedIndex="0" SelectedIndexChanged="OnLanguageChanged" WidthRequest="100" HeightRequest="40" BackgroundColor="White">
+                        <Picker.Items>
+                            <x:String>VN 🇻🇳</x:String>
+                            <x:String>EN 🇺🇸</x:String>
+                        </Picker.Items>
+                    </Picker>
+                    <Button x:Name="LocationToggleBtn" Text="📍 Giả lập" Clicked="OnToggleLocationClicked"
+                            BackgroundColor="#2196F3" CornerRadius="10" HeightRequest="40"/>
+                </HorizontalStackLayout>
+                <Button x:Name="CounterBtn" Text="Nạp dữ liệu" Clicked="OnCounterClicked"
+                        Grid.Column="2" BackgroundColor="#FF5722" CornerRadius="10" HeightRequest="40"/>
+            </Grid>
+            <WebView x:Name="MapWebView" Grid.Row="1" Navigating="OnMapNavigating" 
+                     HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        </Grid>
+    </Grid>
+</ContentPage>

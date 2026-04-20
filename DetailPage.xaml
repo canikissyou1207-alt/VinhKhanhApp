@@ -1,0 +1,15 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VinhKhanhApp.DetailPage" Title="Thông tin chi tiết">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            <Frame Padding="0" CornerRadius="15" IsClippedToBounds="True" HeightRequest="250">
+                <Image x:Name="ImgPoi" Aspect="AspectFill" />
+            </Frame>
+            <Label x:Name="LblName" FontSize="26" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#d32f2f"/>
+            <Button x:Name="BtnSpeakDetail" Text="🔊 NGHE GIỚI THIỆU CHI TIẾT" BackgroundColor="#4CAF50" CornerRadius="10" Clicked="OnSpeakDetailClicked" />
+            <Label x:Name="LblDesc" FontSize="17" LineBreakMode="WordWrap" />
+            <Button Text="QUAY LẠI" Clicked="OnBackClicked" BackgroundColor="#2196F3" CornerRadius="10" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,105 @@
+﻿using Microsoft.Maui.Controls.Maps;
+using Microsoft.Maui.Devices.Sensors;
+using VinhKhanhApp.ViewModels;
+using VinhKhanhApp.Models;
+using Microsoft.Maui.Maps;
+
+namespace VinhKhanhApp.Views;
+
+public partial class MapView : ContentPage
+{
+    private MapViewModel vm => BindingContext as MapViewModel;
+    public MapView()
+    {
+        InitializeComponent();
+        vm.LoadCommand.Execute(null);
+        vm.PropertyChanged += Vm_PropertyChanged;
+
+        // Thêm đoạn này vào nơi bạn khởi tạo hoặc nạp dữ liệu cho danh sách POI, ví dụ trong MapViewModel hoặc nơi bạn quản lý vm.Pois
+        vm.Pois.Add(new POI
+        {
+            Name = "đại học sài gòn",
+            Latitude = 10.759494174781711,
+            Longitude = 106.68201041037294,
+            Description_VN = "Đại học Sài Gòn"
+            // Thêm các thuộc tính khác nếu cần
+        });
+
+        vm.Pois.Add(new POI
+        {
+            Name = "Lẩu Nướng Thuận Việt",
+            Latitude = 10.761059147965453,
+            Longitude = 106.70307371240285,
+            Description_VN = "Lẩu Nướng Thuận Việt"
+        });
+
+        // Thêm nút lấy vị trí hiện tại (nếu dùng code-behind, hoặc bạn có thể thêm trong XAML và gán sự kiện)
+        var gpsButton = new Button { Text = "Lấy vị trí của tôi" };
+        gpsButton.Clicked += async (s, e) => await GetCurrentLocationAndAddPin();
+        // Thêm nút vào layout nếu cần, ví dụ nếu có StackLayout tên là MainLayout:
+        // MainLayout.Children.Add(gpsButton);
+        // Nếu layout chưa có, bạn cần thêm vào XAML hoặc tạo layout động.
+    }
+
+    private async Task GetCurrentLocationAndAddPin()
+    {
+        try
+        {
+            var location = await Geolocation.GetLastKnownLocationAsync();
+            if (location == null)
+            {
+                location = await Geolocation.GetLocationAsync(new GeolocationRequest(GeolocationAccuracy.Medium));
+            }
+            if (location != null)
+            {
+                var pin = new Pin
+                {
+                    Label = "Vị trí của tôi",
+                    Location = new Location(location.Latitude, location.Longitude),
+                    Address = "Vị trí hiện tại"
+                };
+                MapControl.Pins.Add(pin);
+                MapControl.MoveToRegion(MapSpan.FromCenterAndRadius(pin.Location, Distance.FromKilometers(1)));
+            }
+            else
+            {
+                await DisplayAlert("Lỗi", "Không thể lấy vị trí hiện tại.", "OK");
+            }
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Lỗi", $"Không thể lấy vị trí: {ex.Message}", "OK");
+        }
+    }
+
+    private void Vm_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+    {
+        if (e.PropertyName == nameof(vm.IsBusy)) return;
+        // Add pins when Pois collection changes: simple approach - clear and re-add
+        MapControl.Pins.Clear();
+        foreach (var p in vm.Pois)
+        {
+            var pin = new Pin
+            {
+                Label = p.Name,
+                Location = new Location(p.Latitude, p.Longitude),
+                Address = p.Description_VN
+            };
+            pin.MarkerClicked += Pin_MarkerClicked;
+            MapControl.Pins.Add(pin);
+        }
+    }
+
+    private async void Pin_MarkerClicked(object sender, PinClickedEventArgs e)
+    {
+        if (sender is Pin pin)
+        {
+            // show a simple dialog with details and option to open detail page
+            var res = await DisplayActionSheet(pin.Label, "Hủy", null, "Xem chi tiết", "Nghe ngắn");
+            var poi = vm.Pois.FirstOrDefault(x => x.Name == pin.Label);
+            if (res == "Xem chi tiết" && poi != null) await Navigation.PushAsync(new DetailPage(poi, true));
+            if (res == "Nghe ngắn" && poi != null) 
+                await TextToSpeech.Default.SpeakAsync(poi.Description_VN ?? poi.Description_EN ?? "");
+        }
+    }
+}

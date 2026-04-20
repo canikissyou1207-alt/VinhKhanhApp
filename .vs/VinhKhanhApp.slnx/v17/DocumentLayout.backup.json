@@ -1,0 +1,165 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\VinhKhanhApp_Completed_Admin (1)\\VinhKhanhApp-master\\VinhKhanhApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{09E79B5E-B25E-FA6E-5CF7-E51D8896D2ED}|VinhKhanhApp.csproj|c:\\vinhkhanhapp_completed_admin (1)\\vinhkhanhapp-master\\vinhkhanhapp\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09E79B5E-B25E-FA6E-5CF7-E51D8896D2ED}|VinhKhanhApp.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E79B5E-B25E-FA6E-5CF7-E51D8896D2ED}|VinhKhanhApp.csproj|c:\\vinhkhanhapp_completed_admin (1)\\vinhkhanhapp-master\\vinhkhanhapp\\viewmodels\\mapviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09E79B5E-B25E-FA6E-5CF7-E51D8896D2ED}|VinhKhanhApp.csproj|solutionrelative:viewmodels\\mapviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E79B5E-B25E-FA6E-5CF7-E51D8896D2ED}|VinhKhanhApp.csproj|c:\\vinhkhanhapp_completed_admin (1)\\vinhkhanhapp-master\\vinhkhanhapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09E79B5E-B25E-FA6E-5CF7-E51D8896D2ED}|VinhKhanhApp.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E79B5E-B25E-FA6E-5CF7-E51D8896D2ED}|VinhKhanhApp.csproj|c:\\vinhkhanhapp_completed_admin (1)\\vinhkhanhapp-master\\vinhkhanhapp\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09E79B5E-B25E-FA6E-5CF7-E51D8896D2ED}|VinhKhanhApp.csproj|solutionrelative:appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E79B5E-B25E-FA6E-5CF7-E51D8896D2ED}|VinhKhanhApp.csproj|c:\\vinhkhanhapp_completed_admin (1)\\vinhkhanhapp-master\\vinhkhanhapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{09E79B5E-B25E-FA6E-5CF7-E51D8896D2ED}|VinhKhanhApp.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E79B5E-B25E-FA6E-5CF7-E51D8896D2ED}|VinhKhanhApp.csproj|c:\\vinhkhanhapp_completed_admin (1)\\vinhkhanhapp-master\\vinhkhanhapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{09E79B5E-B25E-FA6E-5CF7-E51D8896D2ED}|VinhKhanhApp.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E79B5E-B25E-FA6E-5CF7-E51D8896D2ED}|VinhKhanhApp.csproj|c:\\vinhkhanhapp_completed_admin (1)\\vinhkhanhapp-master\\vinhkhanhapp\\services\\geofenceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09E79B5E-B25E-FA6E-5CF7-E51D8896D2ED}|VinhKhanhApp.csproj|solutionrelative:services\\geofenceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E79B5E-B25E-FA6E-5CF7-E51D8896D2ED}|VinhKhanhApp.csproj|c:\\vinhkhanhapp_completed_admin (1)\\vinhkhanhapp-master\\vinhkhanhapp\\platforms\\android\\androidmanifest.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{09E79B5E-B25E-FA6E-5CF7-E51D8896D2ED}|VinhKhanhApp.csproj|solutionrelative:platforms\\android\\androidmanifest.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09E79B5E-B25E-FA6E-5CF7-E51D8896D2ED}|VinhKhanhApp.csproj|c:\\vinhkhanhapp_completed_admin (1)\\vinhkhanhapp-master\\vinhkhanhapp\\vinhkhanhapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{09E79B5E-B25E-FA6E-5CF7-E51D8896D2ED}|VinhKhanhApp.csproj|solutionrelative:vinhkhanhapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\VinhKhanhApp_Completed_Admin (1)\\VinhKhanhApp-master\\VinhKhanhApp\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\VinhKhanhApp_Completed_Admin (1)\\VinhKhanhApp-master\\VinhKhanhApp\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T08:57:07.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\VinhKhanhApp_Completed_Admin (1)\\VinhKhanhApp-master\\VinhKhanhApp\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "AppShell.xaml.cs",
+              "ToolTip": "C:\\VinhKhanhApp_Completed_Admin (1)\\VinhKhanhApp-master\\VinhKhanhApp\\AppShell.xaml.cs",
+              "RelativeToolTip": "AppShell.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T08:56:48.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\VinhKhanhApp_Completed_Admin (1)\\VinhKhanhApp-master\\VinhKhanhApp\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "MainPage.xaml.cs",
+              "ToolTip": "C:\\VinhKhanhApp_Completed_Admin (1)\\VinhKhanhApp-master\\VinhKhanhApp\\MainPage.xaml.cs",
+              "RelativeToolTip": "MainPage.xaml.cs",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAcwNUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T19:16:59.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MapViewModel.cs",
+              "DocumentMoniker": "C:\\VinhKhanhApp_Completed_Admin (1)\\VinhKhanhApp-master\\VinhKhanhApp\\ViewModels\\MapViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MapViewModel.cs",
+              "ToolTip": "C:\\VinhKhanhApp_Completed_Admin (1)\\VinhKhanhApp-master\\VinhKhanhApp\\ViewModels\\MapViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MapViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T17:40:04.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GeofenceService.cs",
+              "DocumentMoniker": "C:\\VinhKhanhApp_Completed_Admin (1)\\VinhKhanhApp-master\\VinhKhanhApp\\Services\\GeofenceService.cs",
+              "RelativeDocumentMoniker": "Services\\GeofenceService.cs",
+              "ToolTip": "C:\\VinhKhanhApp_Completed_Admin (1)\\VinhKhanhApp-master\\VinhKhanhApp\\Services\\GeofenceService.cs",
+              "RelativeToolTip": "Services\\GeofenceService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAwwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T17:12:25.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AndroidManifest.xml",
+              "DocumentMoniker": "C:\\VinhKhanhApp_Completed_Admin (1)\\VinhKhanhApp-master\\VinhKhanhApp\\Platforms\\Android\\AndroidManifest.xml",
+              "RelativeDocumentMoniker": "Platforms\\Android\\AndroidManifest.xml",
+              "ToolTip": "C:\\VinhKhanhApp_Completed_Admin (1)\\VinhKhanhApp-master\\VinhKhanhApp\\Platforms\\Android\\AndroidManifest.xml",
+              "RelativeToolTip": "Platforms\\Android\\AndroidManifest.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-04-13T15:14:59.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\VinhKhanhApp_Completed_Admin (1)\\VinhKhanhApp-master\\VinhKhanhApp\\AppShell.xaml",
+              "RelativeDocumentMoniker": "AppShell.xaml",
+              "ToolTip": "C:\\VinhKhanhApp_Completed_Admin (1)\\VinhKhanhApp-master\\VinhKhanhApp\\AppShell.xaml",
+              "RelativeToolTip": "AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-13T12:37:57.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\VinhKhanhApp_Completed_Admin (1)\\VinhKhanhApp-master\\VinhKhanhApp\\MainPage.xaml",
+              "RelativeDocumentMoniker": "MainPage.xaml",
+              "ToolTip": "C:\\VinhKhanhApp_Completed_Admin (1)\\VinhKhanhApp-master\\VinhKhanhApp\\MainPage.xaml",
+              "RelativeToolTip": "MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-19T08:31:55.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VinhKhanhApp.csproj",
+              "DocumentMoniker": "C:\\VinhKhanhApp_Completed_Admin (1)\\VinhKhanhApp-master\\VinhKhanhApp\\VinhKhanhApp.csproj",
+              "RelativeDocumentMoniker": "VinhKhanhApp.csproj",
+              "ToolTip": "C:\\VinhKhanhApp_Completed_Admin (1)\\VinhKhanhApp-master\\VinhKhanhApp\\VinhKhanhApp.csproj",
+              "RelativeToolTip": "VinhKhanhApp.csproj",
+              "ViewState": "AgIAABEAAABAAAAAAIAowC4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-13T12:38:01.735Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
