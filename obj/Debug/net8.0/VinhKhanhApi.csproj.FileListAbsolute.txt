@@ -1,0 +1,289 @@
+C:\VinhKhanhApi\bin\Debug\net8.0\appsettings.Development.json
+C:\VinhKhanhApi\bin\Debug\net8.0\appsettings.json
+C:\VinhKhanhApi\bin\Debug\net8.0\VinhKhanhApi.staticwebassets.runtime.json
+C:\VinhKhanhApi\bin\Debug\net8.0\VinhKhanhApi.staticwebassets.endpoints.json
+C:\VinhKhanhApi\bin\Debug\net8.0\VinhKhanhApi.exe
+C:\VinhKhanhApi\bin\Debug\net8.0\VinhKhanhApi.deps.json
+C:\VinhKhanhApi\bin\Debug\net8.0\VinhKhanhApi.runtimeconfig.json
+C:\VinhKhanhApi\bin\Debug\net8.0\VinhKhanhApi.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\VinhKhanhApi.pdb
+C:\VinhKhanhApi\bin\Debug\net8.0\Azure.Core.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Azure.Identity.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Humanizer.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\System.CodeDom.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\System.Composition.Convention.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\System.Composition.Hosting.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\System.Composition.Runtime.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\System.Memory.Data.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\VinhKhanhApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.csproj.AssemblyReference.cache
+C:\VinhKhanhApi\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.AssemblyInfoInputs.cache
+C:\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.AssemblyInfo.cs
+C:\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.csproj.CoreCompileInputs.cache
+C:\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.MvcApplicationPartsAssemblyInfo.cs
+C:\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.MvcApplicationPartsAssemblyInfo.cache
+C:\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.RazorAssemblyInfo.cache
+C:\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.RazorAssemblyInfo.cs
+C:\VinhKhanhApi\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\VinhKhanhApi\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\VinhKhanhApi\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\VinhKhanhApi\obj\Debug\net8.0\scopedcss\bundle\VinhKhanhApi.styles.css
+C:\VinhKhanhApi\obj\Debug\net8.0\staticwebassets.build.json
+C:\VinhKhanhApi\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\VinhKhanhApi\obj\Debug\net8.0\staticwebassets.development.json
+C:\VinhKhanhApi\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\VinhKhanhApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\VinhKhanhApi\obj\Debug\net8.0\VinhKhan.FDB907C6.Up2Date
+C:\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.dll
+C:\VinhKhanhApi\obj\Debug\net8.0\refint\VinhKhanhApi.dll
+C:\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.pdb
+C:\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.genruntimeconfig.cache
+C:\VinhKhanhApi\obj\Debug\net8.0\ref\VinhKhanhApi.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\VinhKhanhApi.exe
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\VinhKhanhApi.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.csproj.AssemblyReference.cache
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.AssemblyInfoInputs.cache
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.AssemblyInfo.cs
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.csproj.CoreCompileInputs.cache
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.MvcApplicationPartsAssemblyInfo.cs
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.MvcApplicationPartsAssemblyInfo.cache
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.RazorAssemblyInfo.cache
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.RazorAssemblyInfo.cs
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\appsettings.Development.json
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\appsettings.json
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\VinhKhanhApi.staticwebassets.runtime.json
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\VinhKhanhApi.staticwebassets.endpoints.json
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\VinhKhanhApi.deps.json
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\VinhKhanhApi.runtimeconfig.json
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\VinhKhanhApi.pdb
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Azure.Core.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Azure.Identity.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Humanizer.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\System.CodeDom.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\System.Composition.Convention.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\System.Composition.Hosting.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\System.Composition.Runtime.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\System.Composition.TypedParts.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\System.Memory.Data.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\scopedcss\bundle\VinhKhanhApi.styles.css
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\staticwebassets.build.json
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\staticwebassets.development.json
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\VinhKhan.FDB907C6.Up2Date
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\refint\VinhKhanhApi.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.pdb
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.genruntimeconfig.cache
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\ref\VinhKhanhApi.dll
+C:\VinhKhanhApp_Completed_Admin (1)\VinhKhanhApp-master\VinhKhanhApi\obj\Debug\net8.0\VinhKhanhApi.sourcelink.json

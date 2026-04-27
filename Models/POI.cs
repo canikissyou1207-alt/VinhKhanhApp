@@ -1,43 +1,37 @@
-using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 
-namespace VinhKhanhApp.Models
+namespace VinhKhanhApi.Models
 {
     public class POI
     {
-        [JsonProperty("POIID")]
+        [Key]
         public int POIID { get; set; }
 
-        [JsonProperty("CategoryID")]
-        public int CategoryID { get; set; }
+        public int CategoryID { get; set; } = 1;
 
-        [JsonProperty("Latitude")]
+        [Required]
         public double Latitude { get; set; }
 
-        [JsonProperty("Longitude")]
+        [Required]
         public double Longitude { get; set; }
 
-        [JsonProperty("Radius")]
-        public double Radius { get; set; }
+        public double Radius { get; set; } = 25;
 
-        [JsonProperty("Priority")]
-        public int Priority { get; set; }
+        public int Priority { get; set; } = 1;
 
-        [JsonProperty("ImagePath")]
+        [StringLength(500)]
         public string? ImagePath { get; set; }
 
-        [JsonProperty("AudioUrl")]
+        [StringLength(500)]
         public string? AudioUrl { get; set; }
 
-        [JsonProperty("Name")]
+        [Required, StringLength(200)]
         public string? Name { get; set; }
 
-        [JsonProperty("Description_VN")]
         public string? Description_VN { get; set; }
 
-        [JsonProperty("Description_EN")]
         public string? Description_EN { get; set; }
 
-        [JsonIgnore]
-        public string? imagePath => ImagePath;
+        public ICollection<POITranslation> Translations { get; set; } = new List<POITranslation>();
     }
 }

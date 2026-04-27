@@ -1,0 +1,72 @@
+@model IEnumerable<VinhKhanhApi.Models.POI>
+@{
+    ViewData["Title"] = "Quản lý POI";
+}
+
+<div class="page-header d-flex justify-content-between align-items-center">
+    <div>
+        <h1 class="h3 mb-1">Quản lý điểm thuyết minh</h1>
+        <div class="text-muted">Thêm, sửa, xóa POI và upload ảnh/audio cho app.</div>
+    </div>
+    <a asp-action="Create" class="btn btn-primary">+ Thêm POI</a>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table align-middle">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Ảnh</th>
+                        <th>Tên</th>
+                        <th>Tọa độ</th>
+                        <th>Bán kính</th>
+                        <th>Audio</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.POIID</td>
+                        <td>
+                            @if (!string.IsNullOrWhiteSpace(item.ImagePath))
+                            {
+                                <img src="@item.ImagePath" width="88" height="60" alt="@item.Name" />
+                            }
+                            else
+                            {
+                                <span class="text-muted">Chưa có</span>
+                            }
+                        </td>
+                        <td>
+                            <div class="fw-semibold">@item.Name</div>
+                            <div class="small text-muted">Ưu tiên: @item.Priority</div>
+                        </td>
+                        <td class="small">@item.Latitude<br />@item.Longitude</td>
+                        <td>@item.Radius m</td>
+                        <td>
+                            @if (!string.IsNullOrWhiteSpace(item.AudioUrl))
+                            {
+                                <audio controls preload="none" style="max-width:220px;">
+                                    <source src="@item.AudioUrl" />
+                                </audio>
+                            }
+                            else
+                            {
+                                <span class="text-muted">TTS fallback</span>
+                            }
+                        </td>
+                        <td class="text-end">
+                            <a asp-action="Edit" asp-route-id="@item.POIID" class="btn btn-sm btn-outline-primary">Sửa</a>
+                            <a asp-action="Delete" asp-route-id="@item.POIID" class="btn btn-sm btn-outline-danger">Xóa</a>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

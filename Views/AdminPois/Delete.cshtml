@@ -1,0 +1,23 @@
+@model VinhKhanhApi.Models.POI
+@{
+    ViewData["Title"] = "Xóa POI";
+}
+
+<div class="page-header">
+    <h1 class="h3 text-danger mb-1">Xóa POI</h1>
+    <div class="text-muted">Thao tác này sẽ xóa cả bản dịch và file upload đi kèm.</div>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body">
+        <p>Bạn có chắc muốn xóa <strong>@Model.Name</strong> không?</p>
+        <p class="text-muted small mb-0">ID: @Model.POIID · Tọa độ: @Model.Latitude, @Model.Longitude</p>
+    </div>
+    <div class="card-footer d-flex gap-2">
+        <form asp-action="Delete" method="post">
+            <input type="hidden" name="id" value="@Model.POIID" />
+            <button type="submit" class="btn btn-danger">Xóa</button>
+        </form>
+        <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+    </div>
+</div>

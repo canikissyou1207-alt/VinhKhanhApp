@@ -1,0 +1,61 @@
+@model PoiAdminEditViewModel
+@{
+    ViewData["Title"] = "Tạo POI";
+}
+
+<div class="page-header">
+    <h1 class="h3 mb-1">Tạo POI mới</h1>
+    <div class="text-muted">Nhập nội dung song ngữ, tọa độ và upload media.</div>
+</div>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data" class="card border-0 shadow-sm">
+    <div class="card-body row g-3">
+        <div class="col-md-6">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="col-md-3">
+            <label asp-for="CategoryID" class="form-label"></label>
+            <input asp-for="CategoryID" class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <label asp-for="Priority" class="form-label"></label>
+            <input asp-for="Priority" class="form-control" />
+        </div>
+        <div class="col-md-4">
+            <label asp-for="Latitude" class="form-label"></label>
+            <input asp-for="Latitude" class="form-control" />
+            <span asp-validation-for="Latitude" class="text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="Longitude" class="form-label"></label>
+            <input asp-for="Longitude" class="form-control" />
+            <span asp-validation-for="Longitude" class="text-danger"></span>
+        </div>
+        <div class="col-md-4">
+            <label asp-for="Radius" class="form-label"></label>
+            <input asp-for="Radius" class="form-control" />
+        </div>
+        <div class="col-12">
+            <label asp-for="Description_VN" class="form-label"></label>
+            <textarea asp-for="Description_VN" class="form-control" rows="5"></textarea>
+        </div>
+        <div class="col-12">
+            <label asp-for="Description_EN" class="form-label"></label>
+            <textarea asp-for="Description_EN" class="form-control" rows="5"></textarea>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="ImageFile" class="form-label"></label>
+            <input asp-for="ImageFile" type="file" accept="image/*" class="form-control" />
+        </div>
+        <div class="col-md-6">
+            <label asp-for="AudioFile" class="form-label"></label>
+            <input asp-for="AudioFile" type="file" accept="audio/*" class="form-control" />
+        </div>
+    </div>
+    <div class="card-footer d-flex gap-2">
+        <button type="submit" class="btn btn-primary">Lưu</button>
+        <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+    </div>
+</form>
