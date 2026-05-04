@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using VinhKhanhApi.DTOs;
 using VinhKhanhApi.Models;
@@ -101,7 +101,10 @@ namespace VinhKhanhApi.Controllers
                 AudioUrl = ToAbsoluteUrl(poi.AudioUrl),
                 Name = poi.Name,
                 Description_VN = poi.Description_VN,
-                Description_EN = poi.Description_EN
+                Description_EN = poi.Description_EN,
+                Description_JP = poi.Description_JP, 
+                Description_KR = poi.Description_KR,  
+                Description_FR = poi.Description_FR   
             };
         }
 

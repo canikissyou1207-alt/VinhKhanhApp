@@ -10,6 +10,57 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "VinhKhanhApi.Controllers.AdminController",
+    "Method": "ActiveUsersData",
+    "RelativePath": "Admin/ActiveUsers/Data",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VinhKhanhApi.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "Admin/Login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VinhKhanhApi.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "Admin/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VinhKhanhApi.Controllers.AuthController",
+    "Method": "Logout",
+    "RelativePath": "Admin/Logout",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "VinhKhanhApi.Controllers.POIsController",
     "Method": "GetPOIs",
     "RelativePath": "api/POIs",
@@ -237,7 +288,7 @@
     "Parameters": [
       {
         "Name": "data",
-        "Type": "VinhKhanhApi.Controllers.UserPosition",
+        "Type": "VinhKhanhApi.Models.UserPosition",
         "IsRequired": true
       }
     ],

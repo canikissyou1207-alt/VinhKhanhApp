@@ -1,13 +1,11 @@
-@model PoiAdminEditViewModel
+﻿@model VinhKhanhApi.ViewModels.PoiAdminEditViewModel
 @{
     ViewData["Title"] = "Tạo POI";
 }
-
 <div class="page-header">
     <h1 class="h3 mb-1">Tạo POI mới</h1>
-    <div class="text-muted">Nhập nội dung song ngữ, tọa độ và upload media.</div>
+    <div class="text-muted">Nhập nội dung đa ngôn ngữ, tọa độ và upload media.</div>
 </div>
-
 <form asp-action="Create" method="post" enctype="multipart/form-data" class="card border-0 shadow-sm">
     <div class="card-body row g-3">
         <div class="col-md-6">
@@ -25,25 +23,37 @@
         </div>
         <div class="col-md-4">
             <label asp-for="Latitude" class="form-label"></label>
-            <input asp-for="Latitude" class="form-control" />
+            <input asp-for="Latitude" class="form-control" type="number" step="any" />
             <span asp-validation-for="Latitude" class="text-danger"></span>
         </div>
         <div class="col-md-4">
             <label asp-for="Longitude" class="form-label"></label>
-            <input asp-for="Longitude" class="form-control" />
+            <input asp-for="Longitude" class="form-control" type="number" step="any" />
             <span asp-validation-for="Longitude" class="text-danger"></span>
         </div>
         <div class="col-md-4">
             <label asp-for="Radius" class="form-label"></label>
-            <input asp-for="Radius" class="form-control" />
+            <input asp-for="Radius" class="form-control" type="number" step="any" />
         </div>
         <div class="col-12">
             <label asp-for="Description_VN" class="form-label"></label>
-            <textarea asp-for="Description_VN" class="form-control" rows="5"></textarea>
+            <textarea asp-for="Description_VN" class="form-control" rows="4"></textarea>
         </div>
         <div class="col-12">
             <label asp-for="Description_EN" class="form-label"></label>
-            <textarea asp-for="Description_EN" class="form-control" rows="5"></textarea>
+            <textarea asp-for="Description_EN" class="form-control" rows="4"></textarea>
+        </div>
+        <div class="col-12">
+            <label asp-for="Description_JP" class="form-label"></label>
+            <textarea asp-for="Description_JP" class="form-control" rows="4"></textarea>
+        </div>
+        <div class="col-12">
+            <label asp-for="Description_KR" class="form-label"></label>
+            <textarea asp-for="Description_KR" class="form-control" rows="4"></textarea>
+        </div>
+        <div class="col-12">
+            <label asp-for="Description_FR" class="form-label"></label>
+            <textarea asp-for="Description_FR" class="form-control" rows="4"></textarea>
         </div>
         <div class="col-md-6">
             <label asp-for="ImageFile" class="form-label"></label>

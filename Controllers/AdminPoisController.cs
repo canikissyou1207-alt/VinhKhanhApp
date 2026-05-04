@@ -1,11 +1,13 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using VinhKhanhApi.Filters;
 using VinhKhanhApi.Models;
 using VinhKhanhApi.Services;
 using VinhKhanhApi.ViewModels;
 
 namespace VinhKhanhApi.Controllers
 {
+    [AdminAuthFilter]
     public class AdminPoisController : Controller
     {
         private readonly VinhKhanhContext _context;
@@ -23,7 +25,6 @@ namespace VinhKhanhApi.Controllers
                 .OrderBy(x => x.Priority)
                 .ThenBy(x => x.Name)
                 .ToListAsync();
-
             return View(items);
         }
 
@@ -36,10 +37,13 @@ namespace VinhKhanhApi.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(PoiAdminEditViewModel vm)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(vm);
-            }
+            if (!ModelState.IsValid) return View(vm);
+
+            string? imagePath = null;
+            if (vm.ImageFile != null)
+                imagePath = await _mediaStorageService.SaveAsync(vm.ImageFile, "uploads/images");
+            else if (!string.IsNullOrEmpty(vm.ImageUrl))
+                imagePath = vm.ImageUrl;
 
             var poi = new POI
             {
@@ -51,7 +55,10 @@ namespace VinhKhanhApi.Controllers
                 Name = vm.Name,
                 Description_VN = vm.Description_VN,
                 Description_EN = vm.Description_EN,
-                ImagePath = await _mediaStorageService.SaveAsync(vm.ImageFile, "uploads/images"),
+                Description_JP = vm.Description_JP,
+                Description_KR = vm.Description_KR,
+                Description_FR = vm.Description_FR,
+                ImagePath = imagePath,
                 AudioUrl = await _mediaStorageService.SaveAsync(vm.AudioFile, "uploads/audio")
             };
 
@@ -65,10 +72,7 @@ namespace VinhKhanhApi.Controllers
         public async Task<IActionResult> Edit(int id)
         {
             var poi = await _context.POIs.FindAsync(id);
-            if (poi == null)
-            {
-                return NotFound();
-            }
+            if (poi == null) return NotFound();
 
             return View(new PoiAdminEditViewModel
             {
@@ -81,8 +85,12 @@ namespace VinhKhanhApi.Controllers
                 Name = poi.Name,
                 Description_VN = poi.Description_VN,
                 Description_EN = poi.Description_EN,
+                Description_JP = poi.Description_JP,
+                Description_KR = poi.Description_KR,
+                Description_FR = poi.Description_FR,
                 ExistingImagePath = poi.ImagePath,
-                ExistingAudioUrl = poi.AudioUrl
+                ExistingAudioUrl = poi.AudioUrl,
+                ImageUrl = poi.ImagePath
             });
         }
 
@@ -90,21 +98,11 @@ namespace VinhKhanhApi.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, PoiAdminEditViewModel vm)
         {
-            if (id != vm.POIID)
-            {
-                return BadRequest();
-            }
-
-            if (!ModelState.IsValid)
-            {
-                return View(vm);
-            }
+            if (id != vm.POIID) return BadRequest();
+            if (!ModelState.IsValid) return View(vm);
 
             var poi = await _context.POIs.FindAsync(id);
-            if (poi == null)
-            {
-                return NotFound();
-            }
+            if (poi == null) return NotFound();
 
             poi.CategoryID = vm.CategoryID;
             poi.Latitude = vm.Latitude;
@@ -114,11 +112,18 @@ namespace VinhKhanhApi.Controllers
             poi.Name = vm.Name;
             poi.Description_VN = vm.Description_VN;
             poi.Description_EN = vm.Description_EN;
+            poi.Description_JP = vm.Description_JP;
+            poi.Description_KR = vm.Description_KR;
+            poi.Description_FR = vm.Description_FR;
 
             if (vm.ImageFile != null)
             {
                 _mediaStorageService.DeleteIfManaged(poi.ImagePath);
                 poi.ImagePath = await _mediaStorageService.SaveAsync(vm.ImageFile, "uploads/images");
+            }
+            else if (!string.IsNullOrEmpty(vm.ImageUrl))
+            {
+                poi.ImagePath = vm.ImageUrl;
             }
 
             if (vm.AudioFile != null)
@@ -136,11 +141,7 @@ namespace VinhKhanhApi.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var poi = await _context.POIs.FindAsync(id);
-            if (poi == null)
-            {
-                return NotFound();
-            }
-
+            if (poi == null) return NotFound();
             return View(poi);
         }
 
@@ -151,11 +152,7 @@ namespace VinhKhanhApi.Controllers
             var poi = await _context.POIs
                 .Include(x => x.Translations)
                 .FirstOrDefaultAsync(x => x.POIID == id);
-
-            if (poi == null)
-            {
-                return NotFound();
-            }
+            if (poi == null) return NotFound();
 
             _mediaStorageService.DeleteIfManaged(poi.ImagePath);
             _mediaStorageService.DeleteIfManaged(poi.AudioUrl);
@@ -169,6 +166,9 @@ namespace VinhKhanhApi.Controllers
         {
             await UpsertTranslationAsync(poi.POIID, "vi", poi.Name, poi.Description_VN, poi.AudioUrl);
             await UpsertTranslationAsync(poi.POIID, "en", poi.Name, poi.Description_EN, poi.AudioUrl);
+            await UpsertTranslationAsync(poi.POIID, "ja", poi.Name, poi.Description_JP, poi.AudioUrl);
+            await UpsertTranslationAsync(poi.POIID, "ko", poi.Name, poi.Description_KR, poi.AudioUrl);
+            await UpsertTranslationAsync(poi.POIID, "fr", poi.Name, poi.Description_FR, poi.AudioUrl);
             await _context.SaveChangesAsync();
         }
 
@@ -187,7 +187,6 @@ namespace VinhKhanhApi.Controllers
                 });
                 return;
             }
-
             item.Title = title;
             item.Description = description;
             item.AudioPath = audioPath;

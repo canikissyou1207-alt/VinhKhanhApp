@@ -1,11 +1,18 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using VinhKhanhApi.Data;
 using VinhKhanhApi.Models;
 using VinhKhanhApi.Services;
 
+var cultureInfo = new System.Globalization.CultureInfo("en-US");
+System.Globalization.CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+System.Globalization.CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// --- 1. ĐĂNG KÝ DỊCH VỤ (SERVICES) ---
 builder.Services.AddDbContext<VinhKhanhContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddControllersWithViews();
@@ -14,7 +21,13 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<MediaStorageService>();
 
-// Cấu hình CORS để trang Admin (React) có thể truy cập API
+// Thêm Session
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromHours(8);
+    options.Cookie.HttpOnly = true;
+});
+
 builder.Services.AddCors(options => {
     options.AddDefaultPolicy(policy => {
         policy.AllowAnyOrigin()
@@ -23,38 +36,63 @@ builder.Services.AddCors(options => {
     });
 });
 
-// --- 2. XÂY DỰNG ỨNG DỤNG (BUILD) ---
 var app = builder.Build();
 
-// --- 3. KHỞI TẠO DỮ LIỆU (DATABASE INITIALIZER) ---
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<VinhKhanhContext>();
     await DbInitializer.InitializeAsync(context);
+
+    var adminDb = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+    await adminDb.Database.ExecuteSqlRawAsync(@"
+        IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='UserPositions' AND xtype='U')
+        CREATE TABLE [dbo].[UserPositions] (
+            [DeviceId]        NVARCHAR (450) NOT NULL,
+            [Latitude]        FLOAT          NOT NULL,
+            [Longitude]       FLOAT          NOT NULL,
+            [DeviceModel]     NVARCHAR (MAX) NULL,
+            [CurrentLanguage] NVARCHAR (MAX) NULL,
+            [LastUpdate]      DATETIME2 (7)  NOT NULL,
+            CONSTRAINT [PK_UserPositions] PRIMARY KEY ([DeviceId])
+        )
+    ");
+
+    await adminDb.Database.ExecuteSqlRawAsync(@"
+        IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='AdminUsers' AND xtype='U')
+        CREATE TABLE [dbo].[AdminUsers] (
+            [Id]           INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+            [Username]     NVARCHAR(100)     NOT NULL,
+            [PasswordHash] NVARCHAR(256)     NOT NULL
+        )
+    ");
+
+    // Tạo tài khoản admin mặc định nếu chưa có (password: admin123)
+    var hasAdmin = await adminDb.AdminUsers.AnyAsync();
+    if (!hasAdmin)
+    {
+        adminDb.AdminUsers.Add(new AdminUser
+        {
+            Username = "admin",
+            PasswordHash = "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9"
+        });
+        await adminDb.SaveChangesAsync();
+    }
 }
 
-// --- 4. CẤU HÌNH LUỒNG XỬ LÝ (MIDDLEWARE) ---
-
-// Swagger nên bật ở môi trường Development
 app.UseSwagger();
 app.UseSwaggerUI();
-
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseRouting();
+app.UseSession();
+app.UseCors();
+app.UseAuthorization();
 
-// QUAN TRỌNG: Thứ tự này phải chính xác để không bị lỗi "Network Error"
-app.UseRouting();      // Bước 1: Xác định đường dẫn
-
-app.UseCors();         // Bước 2: Cho phép quyền truy cập (Phải nằm sau Routing)
-
-app.UseAuthorization(); // Bước 3: Kiểm tra quyền (Phải nằm sau Cors)
-
-// Định tuyến cho MVC Controller
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-// Định tuyến cho API Controller
 app.MapControllers();
 
 app.Run();

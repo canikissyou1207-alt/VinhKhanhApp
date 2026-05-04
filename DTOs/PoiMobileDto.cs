@@ -13,5 +13,8 @@ namespace VinhKhanhApi.DTOs
         public string? Name { get; set; }
         public string? Description_VN { get; set; }
         public string? Description_EN { get; set; }
+        public string? Description_JP { get; set; }
+        public string? Description_KR { get; set; }
+        public string? Description_FR { get; set; }
     }
 }

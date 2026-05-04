@@ -1,56 +1,67 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Linq;
+﻿using VinhKhanhApi.Data;
+using VinhKhanhApi.Filters;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using VinhKhanhApi.Models;
 
 namespace VinhKhanhApi.Controllers
 {
     public class AdminController : Controller
     {
-        // Giả sử bạn có một danh sách static để lưu trữ tạm thời người dùng báo cáo về
-        // Trong thực tế, bạn sẽ lấy dữ liệu này từ Database (SQL Server/MySQL)
-        public static List<UserPosition> ActiveUsersList = new List<UserPosition>();
+        private readonly AppDbContext _db;
 
-        [Route("Admin/ActiveUsers")]
-        public IActionResult ActiveUsers()
+        public AdminController(AppDbContext db)
         {
-            // Truyền danh sách người dùng sang View
-            return View(ActiveUsersList);
+            _db = db;
         }
 
-        // Action nhận dữ liệu từ điện thoại gửi về (API)
+        [AdminAuthFilter]
+        [Route("Admin/ActiveUsers")]
+        public async Task<IActionResult> ActiveUsers()
+        {
+            var cutoff = DateTime.Now.AddMinutes(-2);
+            var users = await _db.UserPositions
+                .Where(u => u.LastUpdate >= cutoff)
+                .OrderByDescending(u => u.LastUpdate)
+                .ToListAsync();
+            return View(users);
+        }
+
+        [AdminAuthFilter]
+        [Route("Admin/ActiveUsers/Data")]
+        public async Task<IActionResult> ActiveUsersData()
+        {
+            var cutoff = DateTime.Now.AddMinutes(-2);
+            var count = await _db.UserPositions
+                .CountAsync(u => u.LastUpdate >= cutoff);
+            return Json(new { count });
+        }
+
         [HttpPost]
         [Route("api/report")]
-        public IActionResult ReportPosition([FromBody] UserPosition data)
+        public async Task<IActionResult> ReportPosition([FromBody] UserPosition data)
         {
             if (data == null) return BadRequest();
 
-            // Cập nhật nếu đã tồn tại, hoặc thêm mới nếu chưa có
-            var existing = ActiveUsersList.FirstOrDefault(u => u.DeviceId == data.DeviceId);
+            var existing = await _db.UserPositions
+                .FirstOrDefaultAsync(u => u.DeviceId == data.DeviceId);
+
             if (existing != null)
             {
                 existing.Latitude = data.Latitude;
                 existing.Longitude = data.Longitude;
                 existing.CurrentLanguage = data.CurrentLanguage;
                 existing.DeviceModel = data.DeviceModel;
-                existing.LastUpdate = System.DateTime.Now;
+                existing.LastUpdate = DateTime.Now;
             }
             else
             {
-                data.LastUpdate = System.DateTime.Now;
-                ActiveUsersList.Add(data);
+                data.LastUpdate = DateTime.Now;
+                _db.UserPositions.Add(data);
             }
 
+            await _db.SaveChangesAsync();
             return Ok(new { status = "success" });
         }
-    }
-
-    public class UserPosition
-    {
-        public string DeviceId { get; set; }
-        public string DeviceModel { get; set; }
-        public double Latitude { get; set; }
-        public double Longitude { get; set; }
-        public string CurrentLanguage { get; set; }
-        public System.DateTime LastUpdate { get; set; }
     }
 }

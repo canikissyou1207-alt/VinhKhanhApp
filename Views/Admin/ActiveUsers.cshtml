@@ -1,81 +1,139 @@
 ﻿@model IEnumerable<VinhKhanhApi.Models.UserPosition>
-
 @{
-    Layout = null; // Để nó không bị dính giao diện mặc định của ASP.NET
+    Layout = null;
+    int deviceCount = Model?.Count() ?? 0;
 }
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AdminPois - Active Users</title>
-    <!-- Nhúng Bootstrap để có giao diện bảng đẹp luôn -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <title>Active Users - Vinh Khanh Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            font-family: 'Segoe UI', sans-serif;
         }
 
-        .admin-card {
-            border-radius: 0;
+        .counter-card {
             border: 2px solid #000;
-            margin-top: 50px;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            background: white;
         }
 
-        .table thead {
-            background-color: #000;
-            color: #fff;
+        .counter-number {
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .device-card {
+            background: white;
+            border-radius: 12px;
+            padding: 16px;
+            border: 1px solid #dee2e6;
+            margin-bottom: 10px;
+        }
+
+        .lang-badge {
+            font-size: 11px;
+            padding: 3px 10px;
+            border-radius: 20px;
+            background: #e9ecef;
+        }
+
+        .online-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #1D9E75;
+            display: inline-block;
+            margin-right: 6px;
         }
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <div class="card admin-card shadow-lg">
-            <div class="card-header bg-black text-white p-3">
-                <h4 class="mb-0">ADMINPOIS - MONITORING</h4>
-            </div>
-            <div class="card-body">
-                <table class="table table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <th>Mẫu Máy</th>
-                            <th>ID Thiết Bị</th>
-                            <th>Ngôn Ngữ</th>
-                            <th>Tọa Độ (Lat, Lng)</th>
-                            <th>Hoạt Động Cuối</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @if (Model != null && Model.Any())
-                        {
-                            foreach (var user in Model)
-                            {
-                                <tr>
-                                    <td><strong>@user.DeviceModel</strong></td>
-                                    <td><code class="text-dark">@user.DeviceId</code></td>
-                                    <td><span class="badge bg-dark">@user.CurrentLanguage</span></td>
-                                    <td>@user.Latitude.ToString("F5"), @user.Longitude.ToString("F5")</td>
-                                    <td>@user.LastUpdate.ToString("HH:mm:ss")</td>
-                                </tr>
-                            }
-                        }
-                        else
-                        {
-                            <tr>
-                                <td colspan="5" class="text-center p-5 text-muted italic">Đang đợi thiết bị kết nối...</td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
+    <nav class="navbar navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="/">Vinh Khanh Admin</a>
+            <div class="navbar-nav flex-row gap-3">
+                <a class="nav-link" href="/">Dashboard</a>
+                <a class="nav-link" href="/AdminPois">POI</a>
+                <a class="nav-link text-warning" href="/Admin/Logout">Đăng xuất</a>
             </div>
         </div>
-    </div>
+    </nav>
+    <div class="container">
+        <div class="row g-4 mb-4">
+            <div class="col-md-4">
+                <div class="counter-card">
+                    <div class="text-muted small mb-2" style="letter-spacing:2px">THIẾT BỊ ĐANG SỬ DỤNG</div>
+                    <div class="counter-number">@deviceCount</div>
+                    <div class="text-muted small">thiết bị kết nối</div>
+                    <div class="text-muted" style="font-size:11px;margin-top:8px">Cập nhật lúc @DateTime.Now.ToString("HH:mm:ss")</div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card border-0 shadow-sm p-4 h-100">
+                    <h6 class="mb-3">Thống kê ngôn ngữ</h6>
+                    @{
+                        var langGroups = Model?.GroupBy(u => u.CurrentLanguage).OrderByDescending(g => g.Count()).ToList();
+                    }
+                    @if (langGroups != null)
+                    {
+                        foreach (var g in langGroups)
+                        {
+                            var pct = deviceCount > 0 ? (g.Count() * 100 / deviceCount) : 0;
+                            <div class="mb-2">
+                                <div class="d-flex justify-content-between small mb-1">
+                                    <span>@(g.Key ?? "Không rõ")</span>
+                                    <span>@g.Count() thiết bị (@pct%)</span>
+                                </div>
+                                <div class="progress" style="height:6px">
+                                    <div class="progress-bar bg-dark" style="width:@pct%"></div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
 
+        <h5 class="mb-3">Danh sách thiết bị đang online</h5>
+        @if (Model != null && Model.Any())
+        {
+            foreach (var u in Model)
+            {
+                <div class="device-card">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <span class="online-dot"></span>
+                            <strong>@(u.DeviceModel ?? "Không rõ")</strong>
+                            <span class="lang-badge ms-2">@(u.CurrentLanguage ?? "?")</span>
+                        </div>
+                        <div class="text-muted small">
+                            Cập nhật: @u.LastUpdate.ToString("HH:mm:ss")
+                        </div>
+                    </div>
+                    <div class="text-muted small mt-1">
+                        📍 @u.Latitude.ToString("F5"), @u.Longitude.ToString("F5")
+                        &nbsp;|&nbsp; ID: <code>@u.DeviceId[..8]...</code>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="text-center p-5 text-muted">
+                <div style="font-size:40px">📡</div>
+                <div>Chưa có thiết bị nào kết nối</div>
+            </div>
+        }
+    </div>
     <script>
-        // Tự động tải lại trang sau 5 giây để cập nhật vị trí mới nhất
         setTimeout(function() { window.location.reload(); }, 5000);
     </script>
-
 </body>
 </html>

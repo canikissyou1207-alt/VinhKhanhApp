@@ -30,11 +30,23 @@ namespace VinhKhanhApi.ViewModels
         [Display(Name = "Mô tả tiếng Anh")]
         public string? Description_EN { get; set; }
 
+        [Display(Name = "Mô tả tiếng Nhật")]
+        public string? Description_JP { get; set; }
+
+        [Display(Name = "Mô tả tiếng Hàn")]
+        public string? Description_KR { get; set; }
+
+        [Display(Name = "Mô tả tiếng Pháp")]
+        public string? Description_FR { get; set; }
+
         [Display(Name = "Ảnh hiện tại")]
         public string? ExistingImagePath { get; set; }
 
         [Display(Name = "Audio hiện tại")]
         public string? ExistingAudioUrl { get; set; }
+
+        [Display(Name = "Link ảnh URL")]
+        public string? ImageUrl { get; set; }
 
         [Display(Name = "Upload ảnh")]
         public IFormFile? ImageFile { get; set; }

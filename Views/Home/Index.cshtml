@@ -1,0 +1,95 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="row g-4 mb-4">
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm text-center p-4">
+            <div class="text-muted small mb-2" style="letter-spacing:2px">THIẾT BỊ ĐANG SỬ DỤNG</div>
+            <div id="deviceCount" style="font-size:72px;font-weight:700;line-height:1">--</div>
+            <div class="text-muted small">thiết bị kết nối</div>
+            <div id="lastUpdate" class="text-muted" style="font-size:11px;margin-top:8px"></div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card border-0 shadow-sm p-4 h-100">
+            <h5 class="mb-3">Thống kê nhanh</h5>
+            <div class="row text-center">
+                <div class="col-4">
+                    <div style="font-size:32px;font-weight:600" id="totalPoi">--</div>
+                    <div class="text-muted small">Tổng POI</div>
+                </div>
+                <div class="col-4">
+                    <div style="font-size:32px;font-weight:600;color:#2196F3" id="onlineCount">--</div>
+                    <div class="text-muted small">Online</div>
+                </div>
+                <div class="col-4">
+                    <div style="font-size:32px;font-weight:600;color:#4CAF50">✓</div>
+                    <div class="text-muted small">API hoạt động</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-header bg-white d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">Quản lý điểm thuyết minh (POI)</h5>
+        <a asp-controller="AdminPois" asp-action="Create" class="btn btn-primary btn-sm">+ Thêm POI</a>
+    </div>
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th>ID</th>
+                        <th>Ảnh</th>
+                        <th>Tên</th>
+                        <th>Tọa độ</th>
+                        <th>Bán kính</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="poiTableBody">
+                    <tr><td colspan="6" class="text-center p-4 text-muted">Đang tải...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    async function loadDashboard() {
+        // Load thiết bị
+        try {
+            const res = await fetch('/Admin/ActiveUsers/Data');
+            const data = await res.json();
+            document.getElementById('deviceCount').textContent = data.count;
+            document.getElementById('onlineCount').textContent = data.count;
+            document.getElementById('lastUpdate').textContent = 'Cập nhật lúc ' + new Date().toLocaleTimeString('vi-VN');
+        } catch { }
+
+        // Load POI
+        try {
+            const res = await fetch('/api/POIs');
+            const pois = await res.json();
+            document.getElementById('totalPoi').textContent = pois.length;
+            document.getElementById('poiTableBody').innerHTML = pois.map(p => `
+                <tr>
+                    <td>${p.poiid}</td>
+                    <td>${p.imagePath ? `<img src="${p.imagePath}" width="80" height="55" style="object-fit:cover;border-radius:8px">` : '<span class="text-muted">Chưa có</span>'}</td>
+                    <td><div class="fw-semibold">${p.name}</div></td>
+                    <td class="small">${p.latitude}<br>${p.longitude}</td>
+                    <td>${p.radius}m</td>
+                    <td class="text-end">
+                        <a href="/AdminPois/Edit/${p.poiid}" class="btn btn-sm btn-outline-primary">Sửa</a>
+                        <a href="/AdminPois/Delete/${p.poiid}" class="btn btn-sm btn-outline-danger">Xóa</a>
+                    </td>
+                </tr>
+            `).join('');
+        } catch { }
+    }
+
+    loadDashboard();
+    setInterval(loadDashboard, 5000);
+</script>
