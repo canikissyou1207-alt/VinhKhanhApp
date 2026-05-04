@@ -1,15 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VinhKhanhApp.DetailPage" Title="Thông tin chi tiết">
-    <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="20">
-            <Frame Padding="0" CornerRadius="15" IsClippedToBounds="True" HeightRequest="250">
-                <Image x:Name="ImgPoi" Aspect="AspectFill" />
+             x:Class="VinhKhanhApp.DetailPage"
+             Title="Thông tin chi tiết">
+
+    <ScrollView BackgroundColor="#F5F5F5">
+        <VerticalStackLayout Spacing="20" Padding="20">
+            <!-- Ảnh quán -->
+            <Frame Padding="0" CornerRadius="15" HasShadow="True" HeightRequest="250" BorderColor="Transparent">
+                <Image x:Name="ImgPoi" Aspect="AspectFill"/>
             </Frame>
-            <Label x:Name="LblName" FontSize="26" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#d32f2f"/>
-            <Button x:Name="BtnSpeakDetail" Text="🔊 NGHE GIỚI THIỆU CHI TIẾT" BackgroundColor="#4CAF50" CornerRadius="10" Clicked="OnSpeakDetailClicked" />
-            <Label x:Name="LblDesc" FontSize="17" LineBreakMode="WordWrap" />
-            <Button Text="QUAY LẠI" Clicked="OnBackClicked" BackgroundColor="#2196F3" CornerRadius="10" />
+
+            <!-- Tên quán (Sẽ đổi màu và nội dung theo quán) -->
+            <Label x:Name="LblName" 
+                   FontSize="32" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" 
+                   TextColor="#d32f2f"/>
+
+            <!-- Bài giới thiệu thuyết minh -->
+            <Frame BackgroundColor="White" CornerRadius="15" Padding="20" HasShadow="False" BorderColor="#E0E0E0">
+                <Label x:Name="LblDesc" 
+                       FontSize="16" 
+                       LineHeight="1.6" 
+                       TextColor="#333"
+                       HorizontalTextAlignment="Center"/>
+            </Frame>
+
+            <!-- Nút bấm nghe thuyết minh -->
+            <Button x:Name="BtnSpeakDetail" 
+                    Text="🔊 Nghe thuyết minh" 
+                    Clicked="OnNarrateClicked" 
+                    BackgroundColor="#4CAF50" 
+                    TextColor="White" 
+                    HeightRequest="60" 
+                    CornerRadius="30" 
+                    FontAttributes="Bold"
+                    FontSize="18"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

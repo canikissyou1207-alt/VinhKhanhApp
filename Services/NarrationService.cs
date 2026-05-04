@@ -1,45 +1,36 @@
 using VinhKhanhApp.Models;
-
-namespace VinhKhanhApp.Services
+namespace VinhKhanhApp.Services;
+public class NarrationService
 {
-    public class NarrationService
+    public async Task NarratePoiAsync(POI poi, string langCode)
     {
-        public async Task NarratePoiAsync(POI poi, bool isVietnamese)
+        string description = langCode switch
         {
-            if (poi == null)
-            {
-                return;
-            }
+            "VN" => poi.Description_VN,
+            "EN" => poi.Description_EN,
+            "JP" => poi.Description_JP,
+            "KR" => poi.Description_KR,
+            "FR" => poi.Description_FR,
+            _ => poi.Description_VN
+        };
+        if (string.IsNullOrEmpty(description)) description = poi.Description_VN;
 
-            if (!string.IsNullOrWhiteSpace(poi.AudioUrl))
-            {
-                try
-                {
-                    await Launcher.Default.OpenAsync(new Uri(poi.AudioUrl));
-                    return;
-                }
-                catch
-                {
-                    // fallback xuống TTS
-                }
-            }
+        var locales = await TextToSpeech.Default.GetLocalesAsync();
 
-            var text = isVietnamese ? poi.Description_VN : poi.Description_EN;
-            if (string.IsNullOrWhiteSpace(text))
-            {
-                text = poi.Description_VN ?? poi.Description_EN ?? poi.Name;
-            }
+        var locale = langCode switch
+        {
+            "VN" => locales.FirstOrDefault(l => l.Language == "vi"),
+            "EN" => locales.FirstOrDefault(l => l.Language == "en"),
+            "JP" => locales.FirstOrDefault(l => l.Language == "ja"),
+            "KR" => locales.FirstOrDefault(l => l.Language == "ko"),
+            "FR" => locales.FirstOrDefault(l => l.Language == "fr"),
+            _ => locales.FirstOrDefault(l => l.Language == "en")
+        };
 
-            if (!string.IsNullOrWhiteSpace(text))
-            {
-                try
-                {
-                    await TextToSpeech.Default.SpeakAsync(text);
-                }
-                catch
-                {
-                }
-            }
-        }
+        // Fallback: nếu không có giọng đọc ngôn ngữ đó thì dùng giọng mặc định
+        locale ??= locales.FirstOrDefault(l => l.Language == "en")
+                ?? locales.FirstOrDefault();
+
+        await TextToSpeech.Default.SpeakAsync(description, new SpeechOptions { Locale = locale });
     }
 }

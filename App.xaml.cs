@@ -1,18 +1,22 @@
-﻿namespace VinhKhanhApp
+﻿using VinhKhanhApp.Services; // ← thêm dòng này
+namespace VinhKhanhApp;
+
+public partial class App : Application
 {
-    public partial class App : Application
+    private readonly DeviceService _deviceService;
+
+    public App(DeviceService deviceService)
     {
-        public App()
-        {
-            InitializeComponent();
+        InitializeComponent();
+        _deviceService = deviceService;
+        MainPage = new AppShell();
+    }
 
-            // Sửa dòng này để đảm bảo không bị nhận giá trị Null
-            MainPage = new AppShell();
-        }
-
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(MainPage);
-        }
+    protected override async void OnStart()
+    {
+        base.OnStart();
+        // Gửi thông tin thiết bị lên admin ngay khi app mở
+        // Thay "VN" bằng ngôn ngữ người dùng đang chọn thực tế
+        await _deviceService.ReportDeviceAsync("VN");
     }
 }

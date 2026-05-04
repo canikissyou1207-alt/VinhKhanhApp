@@ -1,34 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VinhKhanhApp.MainPage">
+             x:Class="VinhKhanhApp.MainPage"
+             BackgroundColor="White">
     <Grid>
-        <Grid x:Name="LanguageOverlay" BackgroundColor="#FDFDFD" ZIndex="10">
-            <VerticalStackLayout VerticalOptions="Center" Spacing="25" Padding="30">
-                <Label Text="VINH KHANH STREET GUIDE" HorizontalOptions="Center" 
-                       FontSize="24" FontAttributes="Bold" TextColor="#FF5722"/>
-                <Button Text="Tiếng Việt 🇻🇳" Clicked="OnSelectVN" HeightRequest="60" CornerRadius="30" BackgroundColor="#FF5722"/>
-                <Button Text="English 🇺🇸" Clicked="OnSelectEN" HeightRequest="60" CornerRadius="30" BackgroundColor="#2196F3"/>
+        <!-- MÀN HÌNH CHỌN NGÔN NGỮ (Hiện khi mở app) -->
+        <ScrollView x:Name="LanguageOverlay" IsVisible="True" BackgroundColor="White" Padding="30">
+            <VerticalStackLayout Spacing="15" VerticalOptions="Center">
+                <Label Text="VINH KHANH STREET GUIDE" FontSize="26" FontAttributes="Bold" TextColor="#FF5722" HorizontalOptions="Center" Margin="0,0,0,30"/>
+                <Button Text="Tiếng Việt 🇻🇳" Clicked="OnSelectVN" BackgroundColor="#FF5722" HeightRequest="60" CornerRadius="30" FontSize="18"/>
+                <Button Text="English 🇺🇸" Clicked="OnSelectEN" BackgroundColor="#2196F3" HeightRequest="60" CornerRadius="30" FontSize="18"/>
+                <Button Text="日本語 🇯🇵" Clicked="OnSelectJP" BackgroundColor="#607D8B" HeightRequest="60" CornerRadius="30" FontSize="18"/>
+                <Button Text="한국어 🇰🇷" Clicked="OnSelectKR" BackgroundColor="#9C27B0" HeightRequest="60" CornerRadius="30" FontSize="18"/>
+                <Button Text="Français 🇫🇷" Clicked="OnSelectFR" BackgroundColor="#4CAF50" HeightRequest="60" CornerRadius="30" FontSize="18"/>
             </VerticalStackLayout>
-        </Grid>
+        </ScrollView>
 
-        <Grid x:Name="MainAppContent" IsVisible="False" RowDefinitions="Auto, *">
-            <Grid Grid.Row="0" ColumnDefinitions="Auto, *, Auto" Padding="10" BackgroundColor="#F5F5F5">
-                <HorizontalStackLayout Grid.Column="0" Spacing="5">
-                    <Picker x:Name="LanguagePicker" SelectedIndex="0" SelectedIndexChanged="OnLanguageChanged" WidthRequest="100" HeightRequest="40" BackgroundColor="White">
+        <!-- GIAO DIỆN CHÍNH -->
+        <Grid x:Name="MainAppContent" RowDefinitions="Auto,Auto,*,Auto" IsVisible="False" BackgroundColor="#F5F5F5">
+            <VerticalStackLayout Grid.Row="0" Padding="15" Spacing="10" BackgroundColor="White">
+                <Grid ColumnDefinitions="*,Auto">
+                    <Label Text="Vinh Khanh Food" FontSize="22" FontAttributes="Bold" VerticalOptions="Center"/>
+                    <Picker x:Name="LanguagePicker" Grid.Column="1" WidthRequest="110">
                         <Picker.Items>
                             <x:String>VN 🇻🇳</x:String>
                             <x:String>EN 🇺🇸</x:String>
+                            <x:String>JP 🇯🇵</x:String>
+                            <x:String>KR 🇰🇷</x:String>
+                            <x:String>FR 🇫🇷</x:String>
                         </Picker.Items>
                     </Picker>
-                    <Button x:Name="LocationToggleBtn" Text="📍 Giả lập" Clicked="OnToggleLocationClicked"
-                            BackgroundColor="#2196F3" CornerRadius="10" HeightRequest="40"/>
-                </HorizontalStackLayout>
-                <Button x:Name="CounterBtn" Text="Nạp dữ liệu" Clicked="OnCounterClicked"
-                        Grid.Column="2" BackgroundColor="#FF5722" CornerRadius="10" HeightRequest="40"/>
+                </Grid>
+                <SearchBar x:Name="PoiSearchBar" Placeholder="Tìm món ngon..." TextChanged="OnSearchTextChanged" BackgroundColor="#F0F0F0" />
+            </VerticalStackLayout>
+
+           
+
+            <Grid Grid.Row="2">
+                <WebView x:Name="MapWebView" Navigating="OnMapNavigating" />
+                <Button Text="🎯" Clicked="OnRecenterClicked" VerticalOptions="End" HorizontalOptions="End"
+                        Margin="15" HeightRequest="60" WidthRequest="60" CornerRadius="30" 
+                        BackgroundColor="White" Shadow="{Shadow Brush=Black, Offset='0,3', Opacity=0.4}"/>
             </Grid>
-            <WebView x:Name="MapWebView" Grid.Row="1" Navigating="OnMapNavigating" 
-                     HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+
+            <Grid Grid.Row="3" ColumnDefinitions="*,*" Padding="10" BackgroundColor="White">
+                <Button x:Name="LocationToggleBtn" Grid.Column="0" Clicked="OnToggleLocationClicked" Margin="5" CornerRadius="10"/>
+                <Button x:Name="CounterBtn" Grid.Column="1" Clicked="OnCounterClicked" Margin="5" CornerRadius="10"/>
+            </Grid>
         </Grid>
     </Grid>
 </ContentPage>
